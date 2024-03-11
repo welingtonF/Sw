@@ -1,0 +1,30 @@
+<html>
+    <title>Site 2F</title>
+    <BODY>
+        <DIV>
+            <TABLE align="center" id="tabela">
+                <TR>
+                    <TD>
+                        <IMG id="imagem" SRC="dormindo.png">
+                    </TD>
+                </TR>
+
+            </TABLE>
+        </DIV>
+    </BODY>
+</html>
+
+<script>
+    var botaoAc = = document("#botaoAc");
+    botaoAc.addEventListener("click", trocarAc);
+    function trocarAc(){
+        document.getElementById("imagem").src = "acordado.png"
+        piscar();
+    } 
+    var botaoDo = document("#botaoDo");
+    botaoAc.addEventListener("click", trocarDo);
+    function trocarDo(){
+        document.getElementById("imagem").src = "dormindo.png"
+        
+    } 
+</script>
