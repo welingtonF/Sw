@@ -2,75 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <style>
-        /* Estilo para centralizar a calculadora */
-        .calculator {
-            width: 400px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estilo para organizar os botões em colunas */
-        .calculator button {
-            width: 70px;
-            height: 50px;
-            margin: 5px;
-            font-size: 20px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="happy.js"></script>
+    <title></title>
 </head>
 <body>
-    <div class="calculator">
-        <h1>Calculator</h1>
-        <input type="text" id="display" readonly>
-        <br>
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        
-        <br>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <br>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <br>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="appendToDisplay('+')">+</button>
-    </div>
+    <h1>Cadastro</h1>
 
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
+   
+   
+    <textarea name="Nome" id="" cols="50" rows="1" placeholder="Nome completo"></textarea>
+    <br>
+    <select name="Cidade" id="" placeholder="Cidades">
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+        <option value="">Cidades</option>
+        <option value="">Ribeirão Pires</option>
+        <option value="">Mauá</option>
+        <option value="">Rio Grande da Serra</option>
+        <option value="">Santo André</option>
+        <option value="">São Bernardo do Campo</option>
+        <option value="">São Caetano do Sul</option>
+        <option value="">Ferraz de Vasconcelos</option>
+    </select>
+    <input type="date">
+    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Cpf" required>
 
-        function calculate() {
-            try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
-            } catch (e) {
-                document.getElementById('display').value = 'Error';
-            }
-        }
-    </script>
 </body>
 </html>
